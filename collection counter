@@ -1,0 +1,11 @@
+from collections import Counter
+n=int(input())
+m=Counter(map(int,input().split()))
+c=int(input())
+b=0
+for i in range(c):
+    size, i_v=map(int, input().split())
+    if size in m and m[size]>0:
+        m[size]-=1
+        b+=i_v
+print(b)
