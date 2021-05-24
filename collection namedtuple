@@ -1,0 +1,11 @@
+import collections
+
+n = int(input())
+w = ",".join(input().split())
+stu = collections.namedtuple("stu", w)
+s = 0
+for i in range(n):
+    r = input().split()
+    su = stu(*r)
+    s += int(su.MARKS)
+print(s / n)
