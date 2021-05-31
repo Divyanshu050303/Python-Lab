@@ -1,0 +1,8 @@
+from datetime import datetime
+
+st = "Mar 11 2011 11:31AM"
+
+dat = datetime.strptime(st, '%b %d %Y %I:%M%p')
+
+print(type(dat))
+print(dat)
