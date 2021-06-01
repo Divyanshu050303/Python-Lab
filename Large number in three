@@ -1,0 +1,9 @@
+n=int(input("Enter the first number"))
+m=int(input("Enter the second number"))
+o=int(input("Enter the third number"))
+if n>m and n>o:
+    print(f"{n} is large ")
+elif m>n and m>o:
+    print(f"{m} is large") 
+else:
+    print(f"{o} is large")
