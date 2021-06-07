@@ -1,0 +1,14 @@
+n = int(input())
+c = {}
+w = []
+
+for i in range(n):
+    wo = input()
+    w.append(wo)
+    if wo in c:
+        c[wo] += 1
+    else:
+        c[wo] = 1
+
+print(len(c))
+print(' '.join([str(c[wo]) for wo in c]))
