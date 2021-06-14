@@ -1,0 +1,103 @@
+# consider three patient in this program
+def getdate():
+    import datetime
+    return datetime.datetime.now()
+def take(n):
+    if n==1:
+        c=int(input("Enter 1 for medicine 2 for dose"))
+        if c==1:
+            v=input("Type here\n")
+            with open("Doremon_medi.txt", "a")as op:
+                op.write(str([str(getdate())])+":"+v+'\n')
+                print("successfully written")
+                print("Thank you for using")
+        elif c== 2:
+            value = input("type here\n")
+            with open("Doremon_dose.txt", "a") as op:
+                op.write(str([str(getdate())]) + ": " + value + "\n")
+                print("successfully written")
+                print("Thank you for using")
+        else:
+            print('You enter some thong wrong')
+    elif n==2:
+        c=int(input("Enter 1 for medicine 2 for dose"))
+        if c==1:
+            v=input("Type here\n")
+            with open("Nobita_medi.txt", "a")as op:
+                op.write(str([str(getdate())])+":"+v+'\n')
+                print("successfully written")
+                print("Thank you for using")
+        elif c== 2:
+            value = input("type here\n")
+            with open("Nobita_dose.txt", "a") as op:
+                op.write(str([str(getdate())]) + ": " + value + "\n")
+                print("successfully written")
+                print("Thank you for using")
+        else:
+            print('You enter some thong wrong')
+    elif n==3:
+        c=int(input("Enter  for medicine 2 for dose"))
+        if c==1:
+            v=input("Type here\n")
+            with open("Chhota bheem_medi.txt", "a")as op:
+                op.write(str([str(getdate())])+":"+v+'\n')
+                print("successfully written")
+                print("Thank you for using")
+        elif c== 2:
+            value = input("type here\n")
+            with open("Chhota Bheem_dose.txt", "a") as op:
+                op.write(str([str(getdate())]) + ": " + value + "\n")
+                print("successfully written")
+                print("Thank you for using")
+        else:
+            print('You enter something wrong')
+    else:
+        print("You enter something wrong")
+def retrive(n):
+    if n==1:
+        c=int(input("Enter 1 for medicine 2 for dose"))
+        if c==1:
+            with open("Doremon_medi.txt") as op:
+                for i in op:
+                    print(i, end='')
+        elif c==2:
+            with open("Doremon_dose.txt")as op:
+                for i in op:
+                    print(i, end="")
+        else:
+            print("You enter something wrong")
+    elif n==2:
+        c=int(input("Enter 1 for medicine 2 for dose"))
+        if c==1:
+            with open("Nobita_medi.txt") as op:
+                for i in op:
+                    print(i, end='')
+        elif c==2:
+            with open("Nobita_dose.txt")as op:
+                for i in op:
+                    print(i, end="")
+        else:
+            print("You enter something wrong")
+    elif n==3:
+        c=int(input("Enter 1 for medicine 2 for dose"))
+        if c==1:
+            with open("Chhota Bheem_medi.txt") as op:
+                for i in op:
+                    print(i, end='')
+        elif c==2:
+            with open("Chhota Bheem_dose.txt")as op:
+                for i in op:
+                    print(i, end="")
+        else:
+            print("You enter something wrong")
+    else:
+        print("You enter some thing wrong")
+a=int(input("Enter 1 for write about patient dose or 2 for know which dose given to the patient"))
+if a==1:
+    n=int(input("Enter 1 for Doremon 2 for Nobita 3 for Chhota Bheem"))
+    take(n)
+elif a==2:
+    n=int(input("Enter 1 for Doremon 2 for Nobita 3 for Chhota Bheem"))
+    retrive(n)
+else:
+    print("You enter some thing wrong")
