@@ -1,0 +1,16 @@
+import time
+import winsound
+from win10toast import ToastNotifier
+
+def timer(message, minute):
+    notifictor=ToastNotifier()
+    notifictor.show_toast("Alarm", f"Alarm will go off in {minute} minute..", duration=50)
+    time.sleep(minute*60)
+    winsound.Beep(frequency=2500, duration=1000)
+    notifictor.show_toast(f"Alarm", message, duration=50)
+
+
+if __name__ == '__main__':
+    message="post on github!"
+    minute=1
+    timer(message, minute)
