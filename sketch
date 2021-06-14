@@ -1,0 +1,20 @@
+import numpy as np
+import imageio
+import scipy.ndimage
+import cv2
+img="dfd.jpeg"
+def rgb2gray(rgb):
+    return np.dot(rgb[...,:3],[0.2989, 0.5870, 0.1140])
+def doge(front, back):
+    final_skitch=front*255/(255-back)
+    final_skitch[final_skitch>255]=255
+    final_skitch[back==255]=255
+    return final_skitch.astype('uint8')
+
+
+ss=imageio.imread(img)
+gray=rgb2gray(ss)
+i=255-gray
+blur=scipy.ndimage.gaussian_filter(i, sigma=15)
+r=doge(blur, gray)
+cv2.imwrite('dfd_sketch.png', r)
