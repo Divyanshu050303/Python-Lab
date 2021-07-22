@@ -1,0 +1,14 @@
+def linear_search(l, m):
+    for i in range(len(l)):
+        if l[i]==m:
+            return i
+    return -1
+
+
+l=list(map(int, input("Enter the list").split()))
+m=int(input("Enter the number which do you want to search"))
+result=linear_search(l, m)
+if result !=-1:
+    print("Present in the list at index ", result)
+else:
+    print("given element Not present in the list")
