@@ -55,3 +55,4 @@ if n=='c':
         print("You press some thing wrong")
 else:
     print("You press something wrong")
+#time pass
